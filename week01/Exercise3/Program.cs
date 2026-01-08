@@ -7,35 +7,34 @@ class Program
         Console.WriteLine("Hello World!");
         Console.WriteLine("This is Exercise 3 of Week 1.");
 
-        string response = "yes";
+        // For Parts 1 and 2, where the user specified the number...
+        // Console.Write("What is the magic number? ");
+        // int magicNumber = int.Parse(Console.ReadLine());
 
-        while (response.ToLower() == "yes")
-        {
-            Console.Write("Do you want to continue? (yes/no): ");
-            response = Console.ReadLine();
-        }
-
-        string response2;
-
-        do
-        {
-            Console.Write("Do you want to continue? (yes/no): ");
-            response2 = Console.ReadLine();
-        } while (response.ToLower() == "yes");
-
-        for (int i = 0; i < 5; i++)
-        {
-            Console.WriteLine(i);
-        }
-
-        string[] colors = { "Red", "Green", "Blue", "Yellow", "Purple"};
-        foreach (string color in colors)
-        {
-            Console.WriteLine(color);
-        }
-
+        // For Part 3, where we use a random number
         Random randomGenerator = new Random();
-        int number = randomGenerator.Next(1, 101);
-        Console.WriteLine($"Random number between 1 and 100: {number}");
+        int magicNumber = randomGenerator.Next(1, 101); // Random number between 1 and 100
+
+        int guess = -1; // Initialize guess to a value that is not the magic number
+
+        // We could also use a do-while loop here...
+        while (guess != magicNumber)
+        {
+            Console.Write("What is your guess? ");
+            guess = int.Parse(Console.ReadLine());
+
+            if (magicNumber > guess)
+            {
+                Console.WriteLine("Higher");
+            }
+            else if (magicNumber < guess)
+            {
+                Console.WriteLine("Lower");
+            }
+            else
+            {
+                Console.WriteLine("You guessed it!");
+            }
+        }
     }
 }

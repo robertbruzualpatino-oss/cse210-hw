@@ -7,23 +7,42 @@ class Program
         Console.WriteLine("Hello World!");
         Console.WriteLine("This is Exercise 2 of Week 1.");
 
-        Console.Write("Enter number: ");
-        string valueFromUser = Console.ReadLine();
+        Console.Write("What is your grade percentage? ");
+        string answer = Console.ReadLine();
+        int percent = int.Parse(answer);
 
-        int x = int.Parse(valueFromUser);
-        int y = 2;
+        string letter = "";
 
-        if (x > y)
+        if (percent >= 90)
         {
-            Console.WriteLine("x is greater than y");
+            letter = "A";
         }
-        else if (x < y)
+        else if (percent >= 80)
         {
-            Console.WriteLine("x is less than y");
+            letter = "B";
+        }
+        else if (percent >= 70)
+        {
+            letter = "C";
+        }
+        else if (percent >= 60)
+        {
+            letter = "D";
         }
         else
         {
-            Console.WriteLine("x is equal to y");
+            letter = "F";
+        }
+
+        Console.WriteLine($"Your grade is: {letter}");
+
+        if (percent >= 70)
+        {
+            Console.WriteLine("You passed!");
+        }
+        else
+        {
+            Console.WriteLine("Better luck next time!");
         }
     }
 }
