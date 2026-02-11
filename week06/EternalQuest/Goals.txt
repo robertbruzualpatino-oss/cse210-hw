@@ -1,0 +1,4 @@
+1000
+SimpleGoal:Go to a picnic,I'm going to a picnic to eat some meals in the forest,100,True
+EternalGoal:Studying mathematics,I'll be studying mathematics to be an excellent professional,50
+ChecklistGoal:Going to a concert,I'm going to a concert so I can see the music artists and bands live,50,10,500,10
